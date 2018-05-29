@@ -1,0 +1,10 @@
+C:\FileInfoWebApp\FileInfoWebApp\src\main\java\com\nuance\file\info\beans\FileInformationResponseBean.java
+C:\FileInfoWebApp\FileInfoWebApp\src\main\java\com\nuance\file\info\controller\IPathOrFileInformationController.java
+C:\FileInfoWebApp\FileInfoWebApp\src\main\java\com\nuance\file\info\util\FileOrDirInfoUtil.java
+C:\FileInfoWebApp\FileInfoWebApp\src\main\java\com\nuance\file\info\service\IFileOrDirInformationService.java
+C:\FileInfoWebApp\FileInfoWebApp\src\main\java\com\nuance\file\info\beans\DirPathInfoResponseBean.java
+C:\FileInfoWebApp\FileInfoWebApp\src\main\java\com\nuance\file\info\beans\FileOrDirInformation.java
+C:\FileInfoWebApp\FileInfoWebApp\src\main\java\com\nuance\file\info\controller\impl\PathOrFileInformationController.java
+C:\FileInfoWebApp\FileInfoWebApp\src\main\java\com\nuance\file\info\constant\PathInformationConstant.java
+C:\FileInfoWebApp\FileInfoWebApp\src\main\java\com\nuance\file\info\service\impl\FileOrDirInformationServiceImpl.java
+C:\FileInfoWebApp\FileInfoWebApp\src\main\java\com\nuance\file\info\beans\GenericResponseBean.java

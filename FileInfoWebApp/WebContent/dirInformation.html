@@ -1,0 +1,21 @@
+<table class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%" id="dir-table-detail">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>File Name</th>
+			<th>Full Path</th>
+			<th>Is Directory</th>
+			<th>File Size</th>
+
+		</tr>
+	</thead>
+	<tbody ng-repeat="pathInfo in dirInfo.pathInformation">
+		<tr>
+			<td>{{$index}}</td>
+			<td>{{pathInfo.fileName}}</td>
+			<td>{{pathInfo.fullPath}}</td>
+			<td>{{pathInfo.dir}}</td>
+			<td>{{pathInfo.fileSize}}</td>
+		</tr>
+	</tbody> 
+</table>

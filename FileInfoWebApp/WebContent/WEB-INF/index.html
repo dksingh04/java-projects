@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html ng-app="fileInfoApp">
+<head>
+<meta charset="UTF-8">
+<title>File/Directory Information System</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
+<script src="/FileInfoWebApp/angular.min.js"></script>
+<script src="/FileInfoWebApp/angular-route.js"></script>
+
+<script src="/FileInfoWebApp/fileInformation.js"></script>
+<!--<script src="core.js"></script>-->
+<style type="text/css">
+    <style>
+        html                    { overflow-y:scroll; }
+        body                    { padding-top:20px; }
+        table {max-height:400px;}
+    </style>
+</style>
+</head>
+<body ng-controller="fileController">
+	<div class="container">
+		<div class="page-header ">
+		  	<h1>Nuance <small>File/Directory Information System</small></h1>
+		</div>
+		<div role="tabpanel">
+	    <!-- Nav tabs -->
+		    <ul class="nav nav-tabs nav-pills" role="tablist">
+		        <li role="presentation" class="active">
+		            <a href="#dirInfo" aria-controls="home" role="tab" data-toggle="tab">Directory Information</a>
+		        </li>
+		        <li role="presentation">
+		            <a href="#fileInfo" aria-controls="tab" role="tab" data-toggle="tab">File Information</a>
+		        </li>
+		    </ul>
+	
+	    <!-- Tab panes -->
+		    <div class="tab-content">
+		        <div role="tabpanel" class="tab-pane active " id="dirInfo">
+		        	<div class="panel panel-default">
+		        		<div class="panel panel-default">
+		        			  <div class="panel-heading">
+		        					<h3 class="panel-title">Directory Information</h3>
+		        			  </div>
+		        			  <div class="panel-body">
+		        			  		<div class="row col-lg-8">
+		        			  			<div class="input-group">
+		  									<span class="input-group-addon" id="sizing-addon2">Please Enter Directory path </span>
+		  									<input type="text" class="form-control" placeholder="Please Enter Directory path" aria-describedby="sizing-addon2" ng-model="formData.dirpath">
+		  									<span class="input-group-btn">
+        										<button class="btn btn-default" type="button" id="id-fld-detail" ng-click="getDirInfo('/dir')">Go!</button>
+      										</span>
+										</div>
+		        			  		</div>
+									<div class="row col-lg-8" id="dir-table-info"  ng-view style="max-height: 400px;">
+									</div>
+		        			  </div>
+		        			 
+		        		</div>
+		        		
+		        	</div>
+		       	</div>
+		        <div role="tabpanel" class="tab-pane" id="fileInfo">
+		        	<div class="panel panel-default">
+		        		<div class="panel panel-default">
+		        			  <div class="panel-heading">
+		        					<h3 class="panel-title">File Information</h3>
+		        			  </div>
+		        			  <div class="panel-body">
+		        			  		<div class="row col-lg-8">
+		        			  			<div class="input-group">
+		  									<span class="input-group-addon" id="sizing-addon2">Please Enter File path </span>
+		  									<input type="text" class="form-control" placeholder="Please Enter File path" aria-describedby="sizing-addon2" ng-model="formData.path">
+		  									<span class="input-group-btn">
+        										<button class="btn btn-default" type="button" id="id-file-detail" ng-click="getFileInfo('/file')">Go!</button>
+      										</span>
+										</div>
+		        			  		</div>
+									<div class="row col-lg-9">
+										<div ng-view></div>
+									</div>
+		        			  </div>
+		      
+		        		</div>
+		        		
+		        	</div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+
+ </body>
+</html>                                		
