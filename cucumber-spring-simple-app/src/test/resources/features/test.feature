@@ -2,7 +2,7 @@ Feature: Refund faulty items
 
   Broken items should be refunded if you have receipt
 
-  Scenario: Returning a broken kettle to the store
-    Given that Joanna bought a faulty kettle for $100
-    When she return the kettle to the store
-    Then she will get $100 refunded
+  Scenario: Testing a simple spring and cucumber data sharing
+    Given that Deepak bought a faulty laptop for $500
+    When he return the kettle to the store
+    Then he will get $500 refunded
