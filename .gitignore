@@ -1,5 +1,6 @@
 # Windows image file caches
 Thumbs.db
+*.class
 ehthumbs.db
 target
 classes
@@ -43,3 +44,5 @@ bin
 Network Trash Folder
 Temporary Items
 .apdisk
+.classpath
+.project
