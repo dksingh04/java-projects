@@ -14,6 +14,7 @@ public class BFSSearch<T> {
 			System.out.print(next.getData()+" ");
 			for(Vertex<T> vNode: next.getChildrens()){
 				if(!vNode.isVisited()){
+					vNode.setVisited(true);
 					queue.add(vNode);
 				}
 			}
