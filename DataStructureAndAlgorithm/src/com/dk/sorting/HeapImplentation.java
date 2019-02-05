@@ -126,22 +126,23 @@ public class HeapImplentation {
 		int swapIndex = -1;
 		Predicate<Integer> condition = null;
 		BiPredicate<Integer, Integer> stopCondidtion = null;
+		
+		if(this.heapType == HeapType.MINHEAP) {
+			condition = (i) -> hasRightChild(i) && getLeftChild(i) > getRightChild(i);
+			stopCondidtion = (i, s) -> items[i] < items[s];
+		}else {
+			condition = (i) -> hasRightChild(i) && getLeftChild(i) < getRightChild(i);
+			stopCondidtion = (i, s) -> items[i] > items[s];
+		}
+		
 		while(hasLeftChild(index)) {
 			swapIndex = getLeftChildIndex(index);
-			if(this.heapType == HeapType.MINHEAP) {
-				condition = (i) -> hasRightChild(i) && getLeftChild(i) > getRightChild(i);
-			}else {
-				condition = (i) -> hasRightChild(i) && getLeftChild(i) < getRightChild(i);
-			}
+			
 			
 			if(condition.test(index)) {
 				swapIndex = getRightChildIndex(index);
 			}
-			if(this.heapType == HeapType.MINHEAP) {
-				stopCondidtion = (i, s) -> items[i] < items[s];
-			}else {
-				stopCondidtion = (i, s) -> items[i] > items[s];
-			}
+			
 			if(stopCondidtion.test(index, swapIndex)) {
 				//If root is max in min from it's child element then stop the swapping
 				break;
@@ -158,12 +159,13 @@ public class HeapImplentation {
 		int index = size - 1;
 		Predicate<Integer> condition = null;
 		
+		if(this.heapType == HeapType.MINHEAP) {
+			condition = (i) -> getParent(i) > items[i];
+		}else {
+			condition = (i) -> getParent(i) < items[i];
+		}
+		
 		while(index != 0) {
-			if(this.heapType == HeapType.MINHEAP) {
-				condition = (i) -> getParent(i) > items[i];
-			}else {
-				condition = (i) -> getParent(i) < items[i];
-			}
 			
 			if(condition.test(index)) {
 				swap(getParentIndex(index), index);
