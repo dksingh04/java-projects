@@ -1,9 +1,12 @@
 package com.dk.recurssion;
 
+import java.awt.desktop.SystemEventListener;
+
 public class FibSeries {
     public static void main(String ...args){
-        //System.out.println(fib(4));
+        System.out.println(fib(4));
         System.out.println(fibC(4));
+        System.out.println(fibSeriesTailRecursion(4, 0, 1));
     }
     // Compute the nth Fibonacci number
     public static int fib(int n){
@@ -31,5 +34,17 @@ public class FibSeries {
         if(cache[n] >= 0) return cache[n];
         cache[n] = fibCaching(n-1, cache) + fibCaching(n-2, cache);
         return cache[n];
+    }
+    //Use of tail recurssion
+    public static int fibSeriesTailRecursion(int n, int a, int b){
+        if(n == 0){
+            return a;
+        }
+        if(n == 1){
+            return b;
+        }
+
+        return fibSeriesTailRecursion(n -1, b, a+b);
+
     }
 }
