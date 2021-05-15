@@ -41,7 +41,7 @@ public class FrogJumps {
                 }
             }
         }
-
+        //This is just for debugging.
         for(int stone:stones){
             System.out.print("["+stone+"]");
             for(int step: map.get(stone)){
