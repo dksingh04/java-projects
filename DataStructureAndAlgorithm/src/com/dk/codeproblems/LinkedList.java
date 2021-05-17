@@ -22,6 +22,15 @@ public class LinkedList {
         return head;
     }
 
+    public static LinkedListNode insertAtTail(LinkedListNode head, LinkedListNode node) {
+        LinkedListNode curr = node;
+        while(curr != null){
+            head = insertAtTail(head, curr.data);
+            curr = curr.next;
+        }
+        return head;
+    }
+
     public static LinkedListNode createLinkedList(ArrayList<Integer> lst) {
         LinkedListNode head = null;
         LinkedListNode tail = null;
