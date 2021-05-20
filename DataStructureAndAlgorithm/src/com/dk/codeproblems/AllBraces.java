@@ -41,7 +41,7 @@ class AllBraces{
 
     public static void main(String[] args) {
         ArrayList<String> result = new ArrayList<>();
-        result =  printAllBraces(2);
+        result =  printAllBraces(3);
         print (result);
     }
 }
