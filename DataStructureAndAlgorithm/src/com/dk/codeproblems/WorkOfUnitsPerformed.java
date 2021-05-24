@@ -32,6 +32,7 @@ public class WorkOfUnitsPerformed {
                     //plus the task
                     noOfUnitsWorked++;
                 }
+                //update the index
                 taskMap.put(tasks[i], i);
             }
         }
