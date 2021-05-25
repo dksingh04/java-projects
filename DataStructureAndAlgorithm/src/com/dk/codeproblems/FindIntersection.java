@@ -24,10 +24,10 @@ public class FindIntersection {
         List<Integer> result = new ArrayList<>();
 
         for(int v: b){
-            if(map.get(v)!=null && map.get(v) > 0){
+            if(map.getOrDefault(v, 0) > 0){
+                map.put(v, map.get(v) != null? map.get(v) - 1: 0);
                 result.add(v);
             }
-            map.put(v, map.get(v) != null? map.get(v) - 1: 0);
         }
 
         return result;
