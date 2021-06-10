@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MoveAllZerostoLeft {
 
     public static void main(String ...args){
-        int[] v = new int[]{1, 10, 20, 0, 59, 63, 0, 88, 0};
+        int[] v = new int[]{1, 10, 20, 0, 63, 59, 0, 88, 0};
         System.out.println("Original Array: " + Arrays.toString(v));
 
         moveAllZerosToLeft(v);
