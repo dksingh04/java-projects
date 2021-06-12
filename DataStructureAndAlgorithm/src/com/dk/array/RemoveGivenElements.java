@@ -1,5 +1,7 @@
 package com.dk.array;
 
+import java.util.Arrays;
+
 public class RemoveGivenElements {
 
     /*
@@ -28,6 +30,17 @@ public class RemoveGivenElements {
         return length;
     }
 
+    public static int removeElementON(int[] nums, int val) {
+        int i = 0;
+        for (int elem: nums){
+            if (elem != val){
+                nums[i] = elem;
+                i++;
+            }
+        }
+        return i;
+    }
+
     public static void main(String ...args){
         int [] nums = new int[]{3,2,2,3};
         int val = 3;
@@ -41,7 +54,14 @@ public class RemoveGivenElements {
             }
         }
         System.out.print("]");
+        System.out.println();
+        System.out.println("Length: "+len);
 
-        System.out.print("Length: "+len);
+        int [] nums1 = new int[]{3,2,2,3};
+        int val1 = 3;
+
+        int len1 = removeElementON(nums, 3);
+
+        ArrayUtils.print(nums);
     }
 }
