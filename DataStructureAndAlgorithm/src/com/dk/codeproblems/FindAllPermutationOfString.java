@@ -7,11 +7,11 @@ public class FindAllPermutationOfString {
 
     public static void main(String ...args){
         List<String> result = findAllPermutations("bad");
-        /* bad -> bad --> fix a bad
+        /* bad -> bad --> fix b bad
                   swap(ad)  -> da -> bda
-           swap(ba) abd -> fix b -> abd
+           swap(ba) abd -> fix a -> abd
                        swap(bd) -> adb
-           swap(ad) dab -> fix a -> dab
+           swap(ad) dab -> fix d -> dab
                            swap(ab) -> dba
 
          */

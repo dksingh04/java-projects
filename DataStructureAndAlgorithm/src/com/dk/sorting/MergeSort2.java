@@ -1,5 +1,7 @@
 package com.dk.sorting;
 
+import java.util.Arrays;
+
 public class MergeSort2 {
     public static void main(String ...args){
         int arr[] = new int [] {5,4,1,2,8};
