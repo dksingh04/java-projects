@@ -1,6 +1,6 @@
 package com.dk.codeproblems;
 
-class Intersect{
+class LinkedListIntersect {
     public static LinkedListNode intersect(LinkedListNode head1, LinkedListNode head2) {
         LinkedListNode list1Node = null;
         int node1Length = get_length(head1);

@@ -7,6 +7,7 @@ public class FindDisappearedNumber {
 
     public static void main(String ...args){
         System.out.println(findDisappearedNumbers(new int[]{4,3,2,7,8,2,3,1}));
+        System.out.println(findDisappearedNumbers(new int[]{7,9,8,11,12}));
     }
 
     public static List<Integer> findDisappearedNumbers(int[] nums) {
@@ -23,6 +24,7 @@ public class FindDisappearedNumber {
                result.add(i + 1);
            }
         }
+
         return result;
     }
 }

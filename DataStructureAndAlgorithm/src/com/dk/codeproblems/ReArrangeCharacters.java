@@ -37,7 +37,8 @@ public class ReArrangeCharacters {
         for(int i = 0; i < str.length(); i++){
             chMapping.put(str.charAt(i), chMapping.getOrDefault(str.charAt(i), 0)+1);
         }
-        PriorityQueue<KeyChars> queue = new PriorityQueue<>(new KeyCharsComparator());
+
+        PriorityQueue<KeyChars> queue = new PriorityQueue<>(Comparator.comparingInt(KeyChars::getFreq).reversed());
         chMapping.entrySet().forEach(e ->{
             queue.add(new KeyChars(e.getKey(), e.getValue()));
         });
@@ -76,17 +77,11 @@ class KeyChars {
         this.freq = freq;
     }
 
-}
-
-class KeyCharsComparator implements Comparator<KeyChars> {
-
-    @Override
-    public int compare(KeyChars o1, KeyChars o2) {
-        if(o1.freq < o2.freq){
-            return 1;
-        }else if(o1.freq > o2.freq){
-            return -1;
-        }
-        return 0;
+    public Character getKey() {
+        return key;
     }
+    public Integer getFreq() {
+        return freq;
+    }
+
 }

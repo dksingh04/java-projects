@@ -38,6 +38,31 @@ public class RotateArray {
         reverseArray(arr, n, size-1);
     }
 
+    public static void rotateArraySimpleApproach(List<Integer> arr, int n){
+        int size = arr.size();
+        n = n % size;
+        if(n  < 0){
+            n = n + size;
+        }
+        int i = 0;
+        while( n > 0){
+            int elem = arr.get((size - n));
+            swap(arr, (size - n), i);
+            n--;
+            arr.set(i, elem);
+            i++;
+        }
+
+        //reverseArray(arr, 0, n - 1);
+    }
+
+    private static void swap(List<Integer> arr, int end, int start){
+        while(end > start){
+            arr.set(end, arr.get(end - 1));
+            end--;
+        }
+    }
+
     public static void main(String ...args){
         List<Integer> arr = Arrays.asList(1, 10, 20, 0, 59, 86, 32, 11, 9, 40);
         System.out.println("Array Before Rotation\n"+arr);
@@ -48,5 +73,16 @@ public class RotateArray {
         System.out.println("Array Before Reverse Rotation\n"+arr);
         rotateArray(arr, -2);
         System.out.println("Array after Reverse Rotation\n"+arr);
+
+        List<Integer> arr2 = Arrays.asList(1, 10, 20, 0, 59, 86, 32, 11, 9, 40);
+        System.out.println("Array Before Rotation\n"+arr2);
+        rotateArraySimpleApproach(arr2, 2);
+        System.out.println("Array After Rotation\n"+arr2);
+
+        List<Integer> arr3 = Arrays.asList(1, 10, 20, 0, 59, 86, 32, 11, 9, 40);
+        System.out.println("Array Before Rotation\n"+arr3);
+        rotateArraySimpleApproach(arr2, -2);
+        System.out.println("Array After Rotation\n"+arr3);
+
     }
 }

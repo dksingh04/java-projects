@@ -32,7 +32,7 @@ public class ReverseCyclicLinkedList {
         return reversedList;
     }
     public static void main(String[] args) {
-        LinkedListNode listHead = null;
+       /* LinkedListNode listHead = null;
         int [] arr = {7, 14, 21, 28};
         listHead = LinkedList.createLinkedList(arr);
 
@@ -52,11 +52,11 @@ public class ReverseCyclicLinkedList {
         listHead = reverse(listHead);
         System.out.print("After Reverse: ");
         LinkedList.display(listHead);
-
-        //LinkedListNode listHead = null;
-        int [] arr2 = {7, 14, 21, 28};
+        */
+        LinkedListNode listHead = null;
+        int [] arr2 = {7, 14, 21, 28, 30};
         listHead = LinkedList.createLinkedList(arr2);
-        listHead.next.next.next.next = listHead.next;
+        listHead.next.next.next.next.next = listHead.next;
         System.out.print("Original: ");
         //LinkedList.display(listHead);
         listHead = reverse(listHead);
