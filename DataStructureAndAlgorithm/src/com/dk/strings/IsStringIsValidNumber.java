@@ -1,4 +1,4 @@
-package com.dk.codeproblems;
+package com.dk.strings;
 
 public class IsStringIsValidNumber {
     enum STATE {START, INTEGER, DECIMAL, AFTERDECIMAL, UNKNOWN;}
@@ -35,7 +35,6 @@ public class IsStringIsValidNumber {
                  return STATE.INTEGER;
              }else if(ch == '.'){
                  return STATE.DECIMAL;
-
              }else{
                  return STATE.UNKNOWN;
              }

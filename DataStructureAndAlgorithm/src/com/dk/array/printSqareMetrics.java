@@ -1,4 +1,4 @@
-package com.dk.codeproblems;
+package com.dk.array;
 
 import java.util.ArrayList;
 import java.util.List;

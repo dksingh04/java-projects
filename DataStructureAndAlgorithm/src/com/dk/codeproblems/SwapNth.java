@@ -14,9 +14,9 @@ class SwapNth{
         LinkedListNode currNode = nthNode.next;
         LinkedListNode nextHead = head.next;
         nthNode.next = head;
-        head.next = currNode.next;
+        nthNode.next.next = currNode.next;
         head = currNode;
-        currNode.next = nextHead;
+        head.next = nextHead;
 
         return head;
     }

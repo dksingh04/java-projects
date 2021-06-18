@@ -1,4 +1,4 @@
-package com.dk.codeproblems;
+package com.dk.strings;
 
 import java.util.ArrayList;
 import java.util.List;

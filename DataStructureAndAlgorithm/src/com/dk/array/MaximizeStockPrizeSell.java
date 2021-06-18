@@ -1,4 +1,4 @@
-package com.dk.codeproblems;
+package com.dk.array;
 
 public class MaximizeStockPrizeSell {
 

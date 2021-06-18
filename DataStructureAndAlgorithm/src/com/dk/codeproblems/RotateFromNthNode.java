@@ -41,7 +41,6 @@ public class RotateFromNthNode {
         tempCurr.next = head;
         rotationNodeP.next = null;
         head = temp;
-        //LinkedList.display(temp);
 
         return head;
     }

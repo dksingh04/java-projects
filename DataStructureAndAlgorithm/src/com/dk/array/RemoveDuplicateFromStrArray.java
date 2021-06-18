@@ -1,4 +1,4 @@
-package com.dk.codeproblems;
+package com.dk.array;
 
 import java.util.Arrays;
 import java.util.HashSet;

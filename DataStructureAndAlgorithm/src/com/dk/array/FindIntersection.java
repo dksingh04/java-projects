@@ -1,4 +1,4 @@
-package com.dk.codeproblems;
+package com.dk.array;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,13 +17,13 @@ public class FindIntersection {
     public static List<Integer> getIntersection(int [] a, int b []){
         Map<Integer, Integer> map = new HashMap<>();
 
-        for(int v: a){
+        for(int v: b){
             map.put(v, map.getOrDefault(v, 0) + 1);
         }
 
         List<Integer> result = new ArrayList<>();
 
-        for(int v: b){
+        for(int v: a){
             if(map.getOrDefault(v, 0) > 0){
                 map.put(v, map.get(v) != null? map.get(v) - 1: 0);
                 result.add(v);

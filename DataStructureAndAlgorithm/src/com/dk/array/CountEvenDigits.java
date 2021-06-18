@@ -1,4 +1,4 @@
-package com.dk.codeproblems;
+package com.dk.array;
 
 public class CountEvenDigits {
     public static void main(String ...args){

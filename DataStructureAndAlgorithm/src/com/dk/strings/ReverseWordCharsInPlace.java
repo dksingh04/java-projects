@@ -1,4 +1,4 @@
-package com.dk.codeproblems;
+package com.dk.strings;
 
 public class ReverseWordCharsInPlace {
     /*

@@ -1,4 +1,4 @@
-package com.dk.codeproblems;
+package com.dk.strings;
 
 import java.util.Comparator;
 import java.util.HashMap;
