@@ -33,6 +33,7 @@ class DeleteNode{
         while(curr != null){
             if(curr == head && curr.data == key){
                 head = head.next;
+                curr = curr.next;
             }
             if(curr.next != null && curr.next.data == key){
                 curr.next = curr.next.next;
@@ -51,7 +52,7 @@ class DeleteNode{
         System.out.print("Original: ");
         LinkedList.display(listHead);
 
-        listHead = deleteNodeV2(listHead, 36);
+        listHead = deleteNodeV2(listHead, 20);
         System.out.printf("After deleting 72 from list: ");
         LinkedList.display(listHead);
     }
