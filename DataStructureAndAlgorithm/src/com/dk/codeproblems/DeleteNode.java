@@ -34,6 +34,7 @@ class DeleteNode{
             if(curr == head && curr.data == key){
                 head = head.next;
                 curr = curr.next;
+                continue;
             }
             if(curr.next != null && curr.next.data == key){
                 curr.next = curr.next.next;
