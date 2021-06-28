@@ -6,7 +6,7 @@ public class ReverseLinkedListIterative {
             return head;
         }
         LinkedListNode toDoList = null;
-        LinkedListNode reversedList =  head;
+        LinkedListNode reversedList =  new LinkedListNode(head.data);
         toDoList = head.next;
         reversedList.next = null;
 
@@ -15,7 +15,8 @@ public class ReverseLinkedListIterative {
             if(toDoList == head){
                 break;
             }
-            LinkedListNode temp = toDoList;
+            //this will assure that original head didn't modified.
+            LinkedListNode temp = new LinkedListNode(toDoList.data);
             toDoList = toDoList.next;
             temp.next = reversedList;
             reversedList = temp;
