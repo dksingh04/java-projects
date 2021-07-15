@@ -21,7 +21,6 @@ public class ReverseKElementsInLinkedList {
 
         LinkedListNode curr = head;
         LinkedListNode reversNodeList = null;
-        int i = k;
         while(k >= 1 && curr != null){
             LinkedListNode temp = curr;
             curr = curr.next;

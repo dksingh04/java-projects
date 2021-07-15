@@ -16,7 +16,7 @@ public class FindIntersection {
 
     public static List<Integer> getIntersection(int [] a, int b []){
         Map<Integer, Integer> map = new HashMap<>();
-
+        Map<Integer, List<Integer>> graph = new HashMap<>();
         for(int v: b){
             map.put(v, map.getOrDefault(v, 0) + 1);
         }

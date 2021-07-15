@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class MergeOverlapIntervals {
     static ArrayList<DataPair> mergeIntervals(ArrayList<DataPair> v) {
-        ArrayList<DataPair> result = new ArrayList<DataPair>();
+        ArrayList<DataPair> result = new ArrayList<>();
         // write your code here
         if (v == null || v.size() == 0) {
             return null;

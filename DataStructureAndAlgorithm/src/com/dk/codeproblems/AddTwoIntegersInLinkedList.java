@@ -3,8 +3,8 @@ package com.dk.codeproblems;
 public class AddTwoIntegersInLinkedList {
     public static void main(String[] args) {
 
-        int[] v1 = new int[]{1, 0, 9, 9}; // 1099
-        int[] v2 = new int[]{7, 3, 2}; // 732
+        int[] v1 = new int[]{9,9,9,9,9,9,9}; // 1099
+        int[] v2 = new int[]{9,9,9,9}; // 732
 
         LinkedListNode first = LinkedList.createLinkedList(v1);
         LinkedListNode second = LinkedList.createLinkedList(v2);

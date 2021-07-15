@@ -1,14 +1,14 @@
 package com.dk.tree;
 
 public class Node{
-    private Node left, right;
-    private int data;
+    public Node left, right;
+    public int val;
     public Node(int data){
-        this.data = data;
+        this.val = data;
     }
 
     public void insert(int value){
-        if(value <= data){
+        if(value <= val){
             if(left == null){
                 left = new Node(value);
             }else{
@@ -24,9 +24,9 @@ public class Node{
     }
 
     public boolean containsInBinaryTree(int value){
-        if(data == value){
+        if(val == value){
             return true;
-        }else if(value <= data){
+        }else if(value <= val){
             if(left == null){
                 return false;
             }else{
@@ -46,14 +46,14 @@ public class Node{
         if(left != null){
             left.printInOrder();
         }
-        System.out.println(data);
+        System.out.println(val);
         if(right != null){
             right.printInOrder();
         }
     }
 
     public void printPreOrder(){
-        System.out.println(data);
+        System.out.println(val);
         if(left != null){
             left.printInOrder();
         }
@@ -68,7 +68,7 @@ public class Node{
         if(right != null){
             right.printInOrder();
         }
-        System.out.println(data);
+        System.out.println(val);
     }
 
 }
