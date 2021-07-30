@@ -61,7 +61,6 @@ public class CriticalConnectionInNetwork {
         Arrays.fill(parent,-1);
 
         boolean[] visited = new boolean[n];
-        //Stack<Integer
         for(int i =0; i < n; i++){
             if(!visited[i]){
                 dfs(0, discovery, lowlink, parent, graph, result, 0, visited);

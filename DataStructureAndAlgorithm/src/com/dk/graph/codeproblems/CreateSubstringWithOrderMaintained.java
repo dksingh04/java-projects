@@ -38,7 +38,7 @@ public class CreateSubstringWithOrderMaintained {
     {
         for(TextNode v : path)
         {
-            System.out.print(v.getVal() + " ");
+            System.out.print(v.getVal());
         }
         System.out.println();
     }
