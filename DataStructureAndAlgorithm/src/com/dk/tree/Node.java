@@ -1,7 +1,7 @@
 package com.dk.tree;
 
 public class Node{
-    public Node left, right;
+    public Node left, right, next;
     public int val;
     public Node(int data){
         this.val = data;
