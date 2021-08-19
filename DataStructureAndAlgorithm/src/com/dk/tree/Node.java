@@ -53,13 +53,14 @@ public class Node{
     }
 
     public void printPreOrder(){
-        System.out.println(val);
+        System.out.print(val+" ");
         if(left != null){
             left.printPreOrder();
         }
         if(right != null){
             right.printPreOrder();
         }
+
     }
     public void printPostOrder(){
         if(left != null){

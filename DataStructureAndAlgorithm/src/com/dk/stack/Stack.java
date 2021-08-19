@@ -32,6 +32,17 @@ public class Stack<T> {
 		}
 		return false;
 	}
+
+	public T peek(){
+		T data = null;
+		if(!isEmpty()){
+			data = stack.get(stack.size()-1);
+			//data = stack.remove(stack.size()-1);
+		}else{
+			System.out.println("Stack is Empty!!");
+		}
+		return data;
+	}
 	
 	public void printData(){
 		for(T d: stack){
