@@ -3,7 +3,7 @@ package com.dk.threading.impl.basic.pc;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClassicPCMessagingQueue<T> extends PCMessagingQueue<T> {
+public class ClassicPCMessagingQueue<T> implements PCMessagingQueue<T> {
 
     private int DEFAULT_SIZE = 10;
     private List<T> queue;
