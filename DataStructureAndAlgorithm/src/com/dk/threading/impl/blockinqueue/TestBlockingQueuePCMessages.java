@@ -1,6 +1,5 @@
 package com.dk.threading.impl.blockinqueue;
 
-import com.dk.threading.impl.basic.pc.ClassicPCMessagingQueue;
 import com.dk.threading.impl.basic.pc.PCMessagingQueue;
 import com.dk.threading.impl.threads.ConsumerThread;
 import com.dk.threading.impl.threads.ProducerThread;
