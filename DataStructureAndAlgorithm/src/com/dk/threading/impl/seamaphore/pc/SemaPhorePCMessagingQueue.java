@@ -8,7 +8,7 @@ import java.util.concurrent.Semaphore;
 
 public class SemaPhorePCMessagingQueue<T> implements PCMessagingQueue<T> {
 
-    private int DEFAULT_SIZE = 10;
+    private int DEFAULT_SIZE = 1;
     private List<T> queue;
     private int size;
 
@@ -17,7 +17,7 @@ public class SemaPhorePCMessagingQueue<T> implements PCMessagingQueue<T> {
 
     public SemaPhorePCMessagingQueue(){
         this.size = DEFAULT_SIZE;
-        queue = new ArrayList<>(DEFAULT_SIZE);
+        queue = new ArrayList<>(1);
     }
     public SemaPhorePCMessagingQueue(int size){
         this.size = DEFAULT_SIZE;

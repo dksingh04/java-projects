@@ -1,12 +1,10 @@
 package com.dk.recurssion;
 
-import java.awt.desktop.SystemEventListener;
-
 public class FibSeries {
     public static void main(String ...args){
         System.out.println(fib(4));
-        System.out.println(fibC(4));
-        System.out.println(fibSeriesTailRecursion(4, 0, 1));
+        System.out.println(fibC(20));
+        //System.out.println(fibSeriesTailRecursion(4, 0, 1));
     }
     // Compute the nth Fibonacci number
     public static int fib(int n){

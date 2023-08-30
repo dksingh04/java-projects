@@ -25,7 +25,7 @@ public class App {
 		g.addNeighbor(i);
 		
 		DFSearch<String> dfs = new DFSearch<>();
-		dfs.dfs(root);
+		dfs.dfsrec(root);
 	}
 
 }

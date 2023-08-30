@@ -3,12 +3,12 @@ package com.dk.recurssion;
 public class Factorial {
 
     public static void main(String ...args){
-        System.out.println(factorial(5));
+        System.out.println(factorial(20));
         System.out.println(factorialCache(5, 1));
-        int [] cache = new int[5];
+        long [] cache = new long[20];
         cache[0] = 1;
         //cache[1] = 1;
-        System.out.println(factorialCache2(5, cache));
+        System.out.println(factorialCache2(20, cache));
     }
 
     public static int factorial(int n){
@@ -33,7 +33,7 @@ public class Factorial {
     }
 
     //Save factorial of each series and use the
-    public static int factorialCache2(int n, int [] cache){
+    public static long factorialCache2(int n, long [] cache){
         if (n < 0) {
             return -1;
         }

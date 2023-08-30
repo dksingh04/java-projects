@@ -20,4 +20,14 @@ public class DFSearch<T> {
 		}
 	}
 
+	public void dfsrec(Vertex<T> vertex){
+		System.out.println("Data: "+vertex.getData());
+		for(Vertex<T> elem: vertex.getNeighbours()){
+			if(!elem.isVisited()){
+				elem.setVisited(true);
+				dfsrec(elem);
+			}
+		}
+	}
+
 }
